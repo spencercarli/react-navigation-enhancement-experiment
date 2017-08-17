@@ -1,3 +1,13 @@
+A quick experiment to add some additional functionality to React Navigation - specifically from ex-navigation. I've added
+
+- pop(n): remove n routes from the top of the stack, defaults to 1
+- popToTop: remove all but the first route from the stack
+- replace: replace the current route with a given route
+
+This is simply an experiment in what it would look like to make the transition from ex-navigation to React Navigation easier, as well as to serve as an example of what's possible in extending React Navigation.
+
+---
+
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
