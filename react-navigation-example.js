@@ -5,7 +5,7 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator, NavigationActions } from 'react-navigation';
 
 /*
  * *******
@@ -16,7 +16,7 @@ const HomeScreen = ({ navigation }) => (
   <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
     <Button
       title="To About Screen"
-      onPress={() => navigation.navigate('about')}
+      onPress={() => navigation.dispatch(push('about'))}
     />
   </View>
 );
@@ -28,7 +28,7 @@ const AboutScreen = ({ navigation }) => (
   <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
     <Button
       title="To Details Screen"
-      onPress={() => navigation.navigate('details')}
+      onPress={() => navigation.dispatch(push('details'))}
     />
     <Button
       title="Replace with Home"
@@ -69,6 +69,11 @@ DetailsScreen.navigationOptions = {
  * ENHANCE NAVIGATOR
  * *****************
  */
+
+ const PUSH_ACTION = 'Navigation/PUSH';
+ const push = (routeName, params) => {
+  return NavigationActions.navigate({ routeName, params });
+ };
 
  const POP_ACTION = 'Navigation/POP';
  const pop = (numberOfScreens = 1) => {

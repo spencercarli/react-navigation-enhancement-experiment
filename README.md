@@ -1,5 +1,6 @@
 A quick experiment to add some additional functionality to React Navigation - specifically from ex-navigation. I've added
 
+- push: add a route to the top of the stack
 - pop(n): remove n routes from the top of the stack, defaults to 1
 - popToTop: remove all but the first route from the stack
 - replace: replace the current route with a given route
